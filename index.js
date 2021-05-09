@@ -17,6 +17,7 @@ app.get('/webhook', function(req, res) {
 app.post('/webhook', function(req, res) {
     // Get the city and date from the request
     let city = req.body.queryResult.parameters['geo-city']; // city is a required param
+    console.log('City: ' + city);
     // Get the date for the weather forecast (if present)
     let date = '';
     if (req.body.queryResult.parameters['date']) {
